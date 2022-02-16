@@ -35,14 +35,24 @@
       "desktop": true,
       "tablet": true,
       "phone": true
-    }
+    },
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
   },
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.98.0",
+      "minUI5Version": "1.30.0",
       "libs": {
-        "sap.ui.core": {}
+        "sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
       }
     },
     "contentDensities": {
@@ -103,5 +113,9 @@
       "async": true,
       "id": "HomeView"
     }
-  }
+  },
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
 }

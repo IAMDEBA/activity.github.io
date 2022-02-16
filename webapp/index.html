@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
     <title>Daily Activity Sheet</title>
-    <style>
-        html, body, body > div, #container, #container-uiarea {
-            height: 100%;
-        }
-    </style>
-  <script
-  id="sap-ui-bootstrap"
-  src="https://openui5.hana.ondemand.com/1.52.11/resources/sap-ui-core.js"
-  data-sap-ui-resourceroots='{
-      "Z.myworklis": "./"
-  }'
-  data-sap-ui-libs="sap.m"
-  data-sap-ui-theme="sap_bluecrystal"		
-  data-sap-ui-compatVersion="edge"
-></script>
+   
+    <script
+        id="sap-ui-bootstrap"
+        src="https://openui5.hana.ondemand.com/1.52.11/resources/sap-ui-core.js"
+        data-sap-ui-resourceroots='{
+            "Z.myworklis": "./"
+        }'
+        data-sap-ui-libs="sap.m"
+		data-sap-ui-theme="sap_bluecrystal"		
+		data-sap-ui-compatVersion="edge"
+    ></script>
+    <script>
+        sap.ui.getCore().attachInit(function(){
+            new sap.ui.core.ComponentContainer({
+                name:"Z.myworklis"
+            }).placeAt("content");
+        });
+</script>
 </head>
-<body class="sapUiBody sapUiSizeCompact" id="content">
-    <div
-        data-sap-ui-component
-        data-name="Z.myworklis"
-        data-id="container"
-        data-settings='{"id" : "Z.myworklis"}'
-        data-handle-validation="true"
-    ></div>
+<body class="sapUiBody sapUiSizeCompact" id="content" role="application">
+    <div id="content"></div>
 </body>
 </html>

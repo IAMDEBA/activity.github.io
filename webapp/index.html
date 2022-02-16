@@ -3,6 +3,7 @@
 <head>
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
     <title>Daily Activity Sheet</title>
     
@@ -14,6 +15,8 @@
         data-sap-ui-resourceroots='{
             "Z.myworklis": "./"
         }'
+        data-sap-ui-async="true"
+        data-sap-ui-frameOptions="trusted"
     ></script>
     <script>
         sap.ui.getCore().attachInit(function(){
@@ -24,6 +27,12 @@
 </script>
 </head>
 <body id="content" role="application">
-    <div id="content"></div>
+    <div 
+        data-sap-ui-component
+        data-name="Z.myworklis"
+        data-id="content"
+        data-settings='{"id" : "Z.myworklis"}'
+        data-handle-validation="true"
+    ></div>
 </body>
 </html>

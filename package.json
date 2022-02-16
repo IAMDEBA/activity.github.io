@@ -1,7 +1,7 @@
 {
   "name": "myworklis",
   "version": "0.0.1",
-  "private": true,
+  "private": "false",
   "description": "Daily Activity Sheet application",
   "keywords": [
     "ui5",

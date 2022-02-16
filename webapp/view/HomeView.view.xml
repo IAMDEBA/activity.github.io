@@ -230,7 +230,23 @@
 				</columns>
 			</Table>
 		</m:content>
-         
+         <m:footer>
+            <m:OverflowToolbar id="otbFooter">
+                <m:ToolbarSpacer/>
+                <m:Button type="Accept" text="Save Changes">
+                    <m:layoutData><m:OverflowToolbarLayoutData priority="NeverOverflow" /></m:layoutData>
+                </m:Button>
+                <m:Button type="Reject" text="Cancel">
+                    <m:layoutData><m:OverflowToolbarLayoutData priority="NeverOverflow" /></m:layoutData>
+                </m:Button>
+                <m:OverflowToolbarButton tooltip="Delete" text="Delete" icon="sap-icon://delete"/>
+                <m:OverflowToolbarButton tooltip="Edit" text="Edit" icon="sap-icon://edit"/>
+                <m:OverflowToolbarButton tooltip="Add" text="Add" icon="sap-icon://add"/>
+                <m:OverflowToolbarButton tooltip="Favorite" text="Favorite" icon="sap-icon://favorite"/>
+                <m:OverflowToolbarButton tooltip="Flag" text="Flag" icon="sap-icon://flag"/>
+                <m:OverflowToolbarToggleButton tooltip="Toggle" text="Toggle" icon="sap-icon://action" press="onTogglePress"/>
+            </m:OverflowToolbar>
+        </m:footer>
 
                 </m:Page>
            

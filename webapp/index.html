@@ -3,7 +3,7 @@
 <head>
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
     <title>Daily Activity Sheet</title>
@@ -19,6 +19,7 @@
         data-sap-ui-async="true"
     >
 </script>
+
     <script>
         sap.ui.getCore().attachInit(function(){
             new sap.ui.core.ComponentContainer({
@@ -26,54 +27,8 @@
             }).placeAt("content");
         });
 </script>
-
-<script type="text/javascript">
-
-    function isElementPartiallyInViewport(el)
-    {
-        if (typeof jQuery !== 'undefined' && el instanceof jQuery) 
-            el = el[0];
-
-        var rect = el.getBoundingClientRect();
-        var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-        var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
-
-        var vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
-        var horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
-
-        return (vertInView && horInView);
-    }
-
-
-    function isElementInViewport (el)
-    {
-        if (typeof jQuery !== 'undefined' && el instanceof jQuery) 
-            el = el[0];
-
-        var rect = el.getBoundingClientRect();
-        var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-        var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
-
-        return (
-               (rect.left >= 0)
-            && (rect.top >= 0)
-            && ((rect.left + rect.width) <= windowWidth)
-            && ((rect.top + rect.height) <= windowHeight)
-        );
-    }
-
-
-    function fnIsVis(ele)
-    {
-        var inVpFull = isElementInViewport(ele);
-        var inVpPartial = isElementPartiallyInViewport(ele);
-        console.clear();
-        console.log("Fully in viewport: " + inVpFull);
-        console.log("Partially in viewport: " + inVpPartial);
-    }
-
-</script>
 </head>
+
 <body role="application">
     <div id="content" style="display: block; width: 200px; height: 100px; background-color: green;"
     ></div>
